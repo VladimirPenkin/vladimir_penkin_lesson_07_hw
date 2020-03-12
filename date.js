@@ -13,11 +13,11 @@ window.onload = function () {
 			alert("Вы ввели не дату!");
 		} else {
 
-			document.querySelector("#yourinput").innerHTML = "Вы вввели дату: " + inputDate;
 			let dateArray = inputDate.split("/").reverse();
 			let dateStr = dateArray.join(", ");
 			let date = new Date(dateStr);
 			let weekDate = date.getDay();
+			document.querySelector("#yourinput").innerHTML = "Вы вввели дату: " + inputDate;
 
 			if (weekDate == 0) {
 				document.querySelector("#weekdate").innerHTML = "Это " + 7 + " день недели.";
